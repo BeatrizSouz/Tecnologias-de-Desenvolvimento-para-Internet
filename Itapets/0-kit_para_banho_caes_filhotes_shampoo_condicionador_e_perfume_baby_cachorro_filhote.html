@@ -12,11 +12,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/style.css">
 
 
 </head>
 
-<body>
+<body class="layout">
   <header>
     <figure>
       <img src="img/gatinhoplogo-de-fundo-azul.webp" alt="Imagem pixelArt de gato com fundo azul" width="90"
@@ -35,7 +36,7 @@
     </nav>
 
     <form>
-      <label for="pesquisa">Pesquisar:</label>
+      <label for="pesquisa"></label>
       <input id="pesquisa" list="sugestões" name="sugestões" placeholder="O que você precisa?">
       <datalist id="sugestões">
         <option value="Ração para cães"></option>
@@ -58,14 +59,12 @@
           src="img/kit_para_banho_caes_filhotes_shampoo_condicionador_e_perfume_baby_cachorro_filhote(600x600).webp"
           height="600" width="600"
           alt="Kit de banho Sanol Dog para filhotes: shampoo verde de 500 mL, condicionador neutro laranja de 500 mL e colônia azul de 120 mL, todos livres de parabenos, corantes e testes em animais"><br>
-        <p>Preço: R$ 39,90</p>
-        <button>Comprar agora</button>
-        <figcaption><br>
-
-          <details>
+        <figcaption>
+           <details>
             <summary><strong>Detalhes do Produto</strong></summary>
 
-            Kit para banho em cachorros Filhotes:
+            <p style="font-size: 25px;">Kit para banho em cachorros Filhotes:</p>
+
             <dl>
 
               <dt>O Shampoo Filhotes:</dt>
@@ -75,15 +74,16 @@
               </dd>
 
             </dl>
-            Características do Shampoo Filhotes:
+
+            <p style="font-size: 25px;">Características do Shampoo Filhotes:</p>
+
             <ul>
               <li>Fórmula biodegradável e livre de parabenos e corantes.</li>
               <li>Fragrância com notas de Camomila e Maracujá.</li>
               <li>Versão: 500 ml</li>
-            </ul>
+            </ul> <br>
 
             <dl>
-
               <dt>Condicionador Neutro:</dt>
               <dd>É composto por ingredientes que hidratam e amaciam o pelo do animal, fortificando com a queratina
                 vegetal, junto com a neutralidade de sua perfume.
@@ -92,11 +92,11 @@
 
             </dl>
 
-            Características do Condicionador Neutro:
+            <p style="font-size: 25px;">Características do Condicionador Neutro:</p>
             <ul>
               <li>Fragrância com notas suaves de Malva e Melissa.</li>
               <li>Versão: 500 ml</li>
-            </ul>
+            </ul><br>
 
             <dl>
               <dt>Perfume Colônia Filhotes:</dt>
@@ -110,7 +110,25 @@
 
           </details>
         </figcaption>
+      
+      
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 39,90</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 
@@ -134,6 +152,7 @@
     E-mail: <a href="mailto:contato@itapets.com.br">contato@itapets.com.br</a>
     Atendimento: Segunda a Sábado, das 08h às 18h
   </footer>
+  <script type="module" src="js/product.js"></script>
 </body>
 
 </html>

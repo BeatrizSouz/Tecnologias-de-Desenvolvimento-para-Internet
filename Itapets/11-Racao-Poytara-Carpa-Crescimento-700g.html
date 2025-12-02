@@ -11,26 +11,29 @@
   <meta name="author" content="Beatriz Carvalho">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="layout">
   <header>
     <figure>
-      <img src="img/gatinhoplogo-de-fundo-azul.webp" alt="Imagem pixelArt de gato com fundo azul"  width="90" height="100">
+      <img src="img/gatinhoplogo-de-fundo-azul.webp" alt="Imagem pixelArt de gato com fundo azul" width="90"
+        height="100">
     </figure>
     <h1>🐾 ItaPets🐾</h1>
     <p>Tudo para seu pet viver feliz!</p>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="index.html#inicio">Início</a></li>
-      <li><a href="index.html#sobre">Sobre Nós</a></li>
-      <li><a href="index.html#produtos">Produtos</a></li>
-      <li><a href="contato.html#contato">Contato</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="index.html#sobre">Sobre Nós</a></li>
+        <li><a href="index.html#produtos">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
 
     <form>
-      <label for="pesquisa">Pesquisar:</label>
+      <label for="pesquisa"></label>
       <input id="pesquisa" list="sugestões" name="sugestões" placeholder="O que você precisa?">
       <datalist id="sugestões">
         <option value="Ração para cães"></option>
@@ -40,10 +43,11 @@
         <option value="Higiene e cuidados"></option>
       </datalist>
     </form>
-  </nav>
+
+  </header>
 
   <main>
-    <article>
+    <article class="produto-detalhe">
       <h2>Ração Poytara Carpa Crescimento 700g</h2>
       <figure>
         <img title="Ração Poytara Carpa Crescimento 700g" src="img/Racao-Poytara-Carpa-Crescimento-700g(600x600).webp"

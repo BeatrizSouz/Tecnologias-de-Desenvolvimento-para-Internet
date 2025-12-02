@@ -11,29 +11,30 @@
   <meta name="author" content="Beatriz Carvalho">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
-
+<body class="layout">
   <header>
     <figure>
       <img src="img/gatinhoplogo-de-fundo-azul.webp" alt="Imagem pixelArt de gato com fundo azul" width="90"
         height="100">
     </figure>
-    <h1>🐾 ItaPets🐾</h1>
+    <h1 id="inicio">🐾 ItaPets🐾</h1>
     <p>Tudo para seu pet viver feliz!</p>
-  </header>
-  <nav>
 
-    <ul>
-      <li><a href="index.html#inicio">Início</a></li>
-      <li><a href="index.html#sobre">Sobre Nós</a></li>
-      <li><a href="index.html#produtos">Produtos</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Início</a></li>
+        <li><a href="index.html#sobre">Sobre Nós</a></li>
+        <li><a href="index.html#produtos">Produtos</a></li>
+      </ul>
+    </nav>
+
     <form>
-      <label for="pesquisa">Pesquisar:</label>
+      <label for="pesquisa"></label>
       <input id="pesquisa" list="sugestões" name="sugestões" placeholder="O que você precisa?">
       <datalist id="sugestões">
         <option value="Ração para cães"></option>
@@ -43,12 +44,13 @@
         <option value="Higiene e cuidados"></option>
       </datalist>
     </form>
-  </nav>
+  </header>
+
 
   <main>
     <h2 id="#contato">Fale com a ItaPets — dúvidas, sugestões ou uma mensagem positiva é sempre bem-vindas!</h2>
-  </main>
-  <form class="form contato" action="mailto:bbea.ccarvalho@gmail.com" method="post" enctype="text/plain">
+
+  <form class="form-contato" action="mailto:bbea.ccarvalho@gmail.com" method="post" enctype="text/plain">
     <fieldset>
       <legend>Insira suas informações</legend>
 
@@ -86,6 +88,7 @@
       <input type="reset" value="Limpar">
     </fieldset>
   </form>
+  </main>
   <footer>
     <nav>
       <ul>
