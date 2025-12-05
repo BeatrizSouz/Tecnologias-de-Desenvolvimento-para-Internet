@@ -10,7 +10,8 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 </head>
 
 <body class="layout">
@@ -51,10 +52,7 @@
       <figure>
         <img title="3 Brinquedo Para Gato Elástico Pendura Porta Ratinho Mola"
           src="img/3-Brinquedo-Para-Gato-Elastico-Pendura-Porta-Ratinho-Mola(600x600).webp" height="600" width="600"
-          alt="Kit com 3 brinquedos elásticos para gatos, incluindo ratinho com mola para pendurar na porta">
-        <h4>Preço: R$ 23,20</h4>
-        <button>Comprar agora</button>
-        <figcaption><br>
+          alt="Kit com 3 brinquedos elásticos para gatos, incluindo ratinho com mola para pendurar na porta">        <figcaption><br>
           <details>
 
             <summary><strong>Detalhes do Produto</strong></summary>
@@ -77,6 +75,22 @@
           </details>
         </figcaption>
       </figure>
+      
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 23,20</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div> 
     </article>
   </main>
 

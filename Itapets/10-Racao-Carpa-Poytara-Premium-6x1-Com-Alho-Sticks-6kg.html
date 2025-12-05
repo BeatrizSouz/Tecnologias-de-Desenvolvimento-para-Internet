@@ -10,7 +10,8 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 </head>
 
 <body class="layout">
@@ -51,9 +52,7 @@
       <figure>
         <img title="Ração Carpa Poytara Premium 6x1 Com Alho Sticks 6kg"
           src="img/Racao-Carpa-Poytara-Premium-6x1-Com-Alho-Sticks-6kg(600x600).webp" height="600" width="600"
-          alt="Embalagem preta de ração Poytara Premium 6x1 com alho para carpas, 6kg">
-        <h4>Preço: R$ 500,00</h4>
-        <button>Comprar agora</button>
+          alt="Embalagem preta de ração Poytara Premium 6x1 com alho para carpas, 6kg"> 
         <figcaption><br>
 
           <details>
@@ -78,6 +77,22 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 500,00</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 

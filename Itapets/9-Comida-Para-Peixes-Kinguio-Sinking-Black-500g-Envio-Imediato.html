@@ -10,7 +10,8 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 </head>
 
 <body class="layout">
@@ -52,8 +53,6 @@
         <img title="Comida Para Peixes Kinguio Sinking Black 500g"
           src="img/Comida-Para-Peixes-Kinguio-Sinking-Black-500g-Envio-Imediato(600x600).webp" height="600" width="600"
           alt="Pote preto de comida para peixes Kinguio Sinking Black, 500g, com ilustrações de peixes">
-        <h4>Preço: R$ 153,00</h4>
-        <button>Comprar agora</button>
         <figcaption><br>
 
           <details>
@@ -126,6 +125,22 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 153,00</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 

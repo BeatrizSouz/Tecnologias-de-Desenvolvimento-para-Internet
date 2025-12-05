@@ -12,7 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 
 
 </head>
@@ -124,6 +125,15 @@
           document.querySelector('.carrinho').addEventListener('click', () => {
 
             showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.buy').addEventListener('click', () => {
+
+            showToast('Produto comprado com sucesso!');
           });
         </script>
 

@@ -10,7 +10,9 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
+  
 </head>
 
 <body class="layout">
@@ -52,8 +54,6 @@
         <img title="Areia Higiênica Viva Verde Grãos Mistos para Gatos"
           src="img/Areia-Higienica-Viva-Verde-Graos-Mistos-para-Gatos(600x600).webp" height="600" width="600"
           alt="Embalagem de areia higiênica Viva Verde para gatos, com grãos mistos e imagem de um gato">
-        <h4>Preço: R$ 69,90</h4>
-        <button>Comprar agora</button>
         <figcaption><br>
 
           <details>
@@ -91,6 +91,20 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 69,90</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+      </div>
     </article>
   </main>
 

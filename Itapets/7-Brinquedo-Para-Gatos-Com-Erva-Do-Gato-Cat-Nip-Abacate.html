@@ -10,7 +10,8 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 </head>
 
 <body class="layout">
@@ -52,8 +53,6 @@
         <img title="Brinquedo Para Gatos Com Erva Do Gato Cat Nip Abacate Bola"
           src="img/Brinquedo-Para-Gatos-Com-Erva-Do-Gato-Cat-Nip-Abacate(600x600).webp" height="600" width="600"
           alt="Brinquedo para gatos em formato de abacate com catnip, com gato interagindo">
-        <h4>Preço: R$ 19,00</h4>
-        <button>Comprar agora</button>
         <figcaption><br>
 
           <details>
@@ -111,6 +110,22 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 19,00</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 

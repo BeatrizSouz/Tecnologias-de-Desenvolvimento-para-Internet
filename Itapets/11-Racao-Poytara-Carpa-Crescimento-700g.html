@@ -12,7 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 </head>
 
 <body class="layout">
@@ -53,8 +54,6 @@
         <img title="Ração Poytara Carpa Crescimento 700g" src="img/Racao-Poytara-Carpa-Crescimento-700g(600x600).webp"
           height="600" width="600"
           alt="Embalagem branca com detalhes azuis e verdes da ração Poytara Carpa Crescimento, 700g">
-        <h4>Preço: R$ 59,00</h4>
-        <button>Comprar</button>
         <figcaption>
           <br>
 
@@ -120,6 +119,22 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 59,00</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 

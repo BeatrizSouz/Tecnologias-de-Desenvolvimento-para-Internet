@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+  height: 100%;
+  background-color: #F9F6F6;
+  font-size: 16px;
+
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(249, 246, 246, 0.585);
+  color: #222;
+
+}
+
+pre {
+  white-space: pre-wrap;
+  margin: 20px auto;
+  font-size: 18px;
+  max-width: min(90%, 800px);
+  text-align: center;
+  background-color: rgba(249, 246, 246, 0.585);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+article {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+/*#e9c2ef; #c2ddef #B0E0E6 #E6E6FA*/
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+}
+
+.form-contato{
+  border: 1px inset rgb(187, 187, 187);
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+section {
+  display: grid;
+  border: 1px inset rgb(187, 187, 187);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto repeat(3, 1fr);
+  gap: 10px;
+  max-width: 90%;
+  padding: 10px;
+  margin: 50px auto;
+}
+
+details {
+  background-color: #e0dcdc7a;
+  border-left: 5px solid #ffb347;
+  padding: 20px 20px;
+  justify-content: left;
+  border-radius: 8px;
+  font-size: 16px;
+  max-width: none;  
+  max-height: 300px;
+  overflow-y: auto;    
+
+}
+
+#produtos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+footer p{
+  text-align: center;
+}
+
+
+.notificacao {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 9999;
+  pointer-events: none; /* não impede cliques por baixo */
+}
+.notificacao.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

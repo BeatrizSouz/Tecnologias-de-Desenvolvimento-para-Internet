@@ -11,7 +11,9 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
+  
 </head>
 
 <body class="layout">
@@ -53,8 +55,6 @@
         <img title="Cama Pet Caminha de Cachorro Grande com Fundo Impermeável"
           src="img/cama-pet-caminha-de-cachorro-grande-com-fundo-impermeavel(600x600).webp" height="600" width="600"
           alt="Cama pet grande com fundo impermeável, na cor verde, com cachorro sentado sobre ela">
-        <h4>Preço: R$ 122,90</h4>
-        <button>Comprar agora</button>
         <figcaption><br>
 
           <details>
@@ -90,6 +90,20 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$ 122,90</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+      </div>
     </article>
   </main>
 

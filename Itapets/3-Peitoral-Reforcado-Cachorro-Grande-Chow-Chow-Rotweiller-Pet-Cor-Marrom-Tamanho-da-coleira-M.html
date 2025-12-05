@@ -10,7 +10,9 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
+  
 </head>
 
 <body class="layout">
@@ -53,8 +55,6 @@
           src="img/Peitoral-Reforcado-Cachorro-Grande-Chow-Chow-Rotweiller-Pet-Cor-Marrom-Tamanho-da-coleira-M(600x600).webp"
           height="600" width="600"
           alt="Peitoral reforçado marrom para cachorro grande, ideal para raças como Chow Chow e Rottweiler, tamanho M">
-        <h4>Preço: R$40,87</h4>
-        <button>Comprar agora</button>
         <figcaption><br>
 
           <details>
@@ -94,6 +94,22 @@
           </details>
         </figcaption>
       </figure>
+
+      <div class="lado-direito"><br>
+        <h4>Preço: R$40,87</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 

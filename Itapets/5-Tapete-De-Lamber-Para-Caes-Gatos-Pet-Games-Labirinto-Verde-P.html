@@ -10,7 +10,8 @@
   <meta name="author" content="Beatriz Carvalho">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 </head>
 
 <body class="layout">
@@ -52,8 +53,6 @@
         <img title="Tapete Labirinto Verde  De Lamber Para Cães Gatos Pet Games Tamanho P"
           src="img/Tapete-De-Lamber-Para-Caes-Gatos-Pet-Games-Labirinto-Verde-P(600x600).webp" height="600" width="600"
           alt="Tapete de lamber verde em formato de labirinto, ideal para cães e gatos, tamanho P">
-        <h4>Preço: R$ 44,99</h4>
-        <button>Comprar agora</button>
         <figcaption><br>
 
           <details>
@@ -84,6 +83,22 @@
           </details>
         </figcaption>
       </figure>
+
+     <div class="lado-direito"><br>
+        <h4>Preço: R$ 44,99</h4>
+        <button class="buy">Comprar agora</button>
+        <button class="carrinho">Adicionar ao carrinho</button>
+        <script type="module">
+          import { showToast } from './js/produto.js';
+
+          document.querySelector('.carrinho').addEventListener('click', () => {
+
+            showToast('Produto adicionado ao carrinho!');
+          });
+        </script>
+
+         
+      </div>
     </article>
   </main>
 

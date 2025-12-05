@@ -12,7 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/f_style.css">
+  <link rel="stylesheet" href="css/s_style.css">
 
 </head>
 
@@ -88,6 +89,9 @@
       <input type="reset" value="Limpar">
     </fieldset>
   </form>
+
+
+
   </main>
   <footer>
     <nav>
@@ -108,6 +112,39 @@
     E-mail: <a href="mailto:contato@itapets.com.br">contato@itapets.com.br</a>
     Atendimento: Segunda a Sábado, das 08h às 18h
   </footer>
+
+    <!-- Bibliotecas -->
+  <script src="https://cdn.jsdelivr.net/npm/just-validate@2/dist/just-validate.production.min.js"></script>
+
+
+  <script>
+    const validacao = new JustValidate('.form-contato');
+
+    validacao
+      .addField('#fname', [
+        { rule: 'required', errorMessage: 'Por favor, insira seu nome' },
+        { rule: 'minLength', value: 3, errorMessage: 'O nome deve ter pelo menos 3 letras' }
+      ])
+      .addField('#email', [
+        { rule: 'required', errorMessage: 'Informe seu e-mail' },
+        { rule: 'email', errorMessage: 'Digite um e-mail válido' }
+      ])
+      .addField('#phone', [
+        { rule: 'required', errorMessage: 'Informe seu telefone' },
+        { rule: 'customRegexp', value: /^[0-9]{2}-[0-9]{5}-[0-9]{4}$/, errorMessage: 'Formato esperado: 99-99999-9999' }
+      ])
+      .addField('#nota', [
+        { rule: 'required', errorMessage: 'Dê uma nota ao site' }
+      ])
+      .addField('textarea[name="message"]', [
+        { rule: 'required', errorMessage: 'Escreva sua mensagem' },
+        { rule: 'minLength', value: 5, errorMessage: 'A mensagem deve ter pelo menos 5 caracteres' }
+      ])
+      .onSuccess((evento) => {
+        alert('Formulário validado com sucesso! Agora pode ser enviado.');
+      });
+  </script>
+
 </body>
 
 </html>
